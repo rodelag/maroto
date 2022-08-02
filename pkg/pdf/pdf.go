@@ -222,13 +222,13 @@ func (s *PdfMaroto) GetCurrentOffset() float64 {
 // SetPageMargins overrides default margins (10,10,10)
 // the new page margin will affect all PDF pages.
 func (s *PdfMaroto) SetPageMargins(left, top, right float64) {
-	if top > defaultTopMargin {
-		s.marginTop = top - defaultTopMargin
-	}
-
-	s.Pdf.SetMargins(left, defaultTopMargin, right)
+	s.marginTop = top - 10
+	s.Pdf.SetMargins(left, 10.0, right)
 }
 
+func (s *PdfMaroto) SetTopPageMargin(top float64) {
+	s.marginTop = top - 10
+}
 // GetPageMargins returns the set page margins. Comes in order of Left, Top, Right, Bottom
 // Default page margins is left: 10, top: 10, right: 10.
 func (s *PdfMaroto) GetPageMargins() (left float64, top float64, right float64, bottom float64) {
