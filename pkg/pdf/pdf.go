@@ -229,6 +229,7 @@ func (s *PdfMaroto) SetPageMargins(left, top, right float64) {
 func (s *PdfMaroto) SetTopPageMargin(top float64) {
 	s.marginTop = top - 10
 }
+
 // GetPageMargins returns the set page margins. Comes in order of Left, Top, Right, Bottom
 // Default page margins is left: 10, top: 10, right: 10.
 func (s *PdfMaroto) GetPageMargins() (left float64, top float64, right float64, bottom float64) {
@@ -438,9 +439,9 @@ func (s *PdfMaroto) Text(text string, prop ...props.Text) {
 
 	textProp.MakeValid(s.defaultFontFamily)
 
-	if textProp.Top > s.rowHeight {
+	/*if textProp.Top > s.rowHeight {
 		textProp.Top = s.rowHeight
-	}
+	}*/
 
 	cell := internal.Cell{
 		X:      s.xColOffset,

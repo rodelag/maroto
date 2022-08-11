@@ -195,7 +195,7 @@ func (s *Barcode) MakeValid() {
 
 // MakeValid from Text define default values for a Text.
 func (s *Text) MakeValid(defaultFamily string) {
-	minValue := 0.0
+	//minValue := 0.0
 	undefinedValue := 0.0
 
 	if s.Family == "" {
@@ -214,9 +214,9 @@ func (s *Text) MakeValid(defaultFamily string) {
 		s.Size = 10.0
 	}
 
-	if s.Top < minValue {
+	/*if s.Top < minValue {
 		s.Top = minValue
-	}
+	}*/
 
 	if s.VerticalPadding < 0 {
 		s.VerticalPadding = 0
