@@ -130,7 +130,7 @@ type TableList struct {
 // and define default values for a rectangle.
 func (s *Rect) MakeValid() {
 	minPercentage := 0.0
-	maxPercentage := 100.0
+	maxPercentage := 200.0
 	minValue := 0.0
 
 	if s.Percent <= minPercentage || s.Percent > maxPercentage {
