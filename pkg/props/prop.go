@@ -155,7 +155,7 @@ func (s *Rect) MakeValid() {
 // and define default values for a barcode.
 func (s *Barcode) MakeValid() {
 	minPercentage := 0.0
-	maxPercentage := 100.0
+	maxPercentage := 200.0
 	minValue := 0.0
 
 	if s.Percent <= minPercentage || s.Percent > maxPercentage {

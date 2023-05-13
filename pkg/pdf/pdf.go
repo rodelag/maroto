@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	defaultTopMargin   = 10
+	defaultTopMargin   = 0
 	defaultLeftMargin  = 10
 	defaultRightMargin = 10
 	defaultFontSize    = 16
@@ -438,10 +438,6 @@ func (s *PdfMaroto) Text(text string, prop ...props.Text) {
 	}
 
 	textProp.MakeValid(s.defaultFontFamily)
-
-	/*if textProp.Top > s.rowHeight {
-		textProp.Top = s.rowHeight
-	}*/
 
 	cell := internal.Cell{
 		X:      s.xColOffset,
