@@ -3,13 +3,13 @@ package pdf
 import (
 	"bytes"
 
-	"github.com/johnfercher/maroto/internal/fpdf"
-	"github.com/johnfercher/maroto/pkg/color"
+	"github.com/rodelag/maroto/internal/fpdf"
+	"github.com/rodelag/maroto/pkg/color"
 
-	"github.com/johnfercher/maroto/internal"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/props"
 	"github.com/jung-kurt/gofpdf"
+	"github.com/rodelag/maroto/internal"
+	"github.com/rodelag/maroto/pkg/consts"
+	"github.com/rodelag/maroto/pkg/props"
 )
 
 const (
